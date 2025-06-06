@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiffinWala - Your Daily Food Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-gray-50 font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="bg-green-600 text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">TiffinWala</h1>
+            <div class="flex gap-4">
+                <button id="notificationBtn" class="p-2"><i class="bi bi-bell"></i></button>
+                <button id="profileBtn" class="p-2"><i class="bi bi-person-circle"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pt-20 pb-16">
+        <!-- Welcome Section -->
+        <div class="bg-white rounded-lg p-6 shadow-md mb-6">
+            <h2 class="text-2xl font-bold mb-2">स्वागत आहे, <span id="userName">राहुल</span></h2>
+            <p class="text-gray-600">आजचा दिवस चविष्ट जेवणासह सुरू करा!</p>
+        </div>
+
+        <!-- Today's Menu -->
+        <div class="bg-white rounded-lg p-6 shadow-md mb-6">
+            <h3 class="text-xl font-semibold mb-4">आजचे मेनू</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border rounded-lg p-4">
+                    <h4 class="font-semibold">दुपारचे जेवण</h4>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>चपाती (4)</li>
+                        <li>दाल फ्राय</li>
+                        <li>भाजी</li>
+                        <li>राईस</li>
+                    </ul>
+                    <p class="mt-2 text-green-600 font-semibold">₹60/-</p>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h4 class="font-semibold">रात्रीचे जेवण</h4>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>चपाती (4)</li>
+                        <li>पनीर मसाला</li>
+                        <li>दाल तडका</li>
+                        <li>राईस</li>
+                    </ul>
+                    <p class="mt-2 text-green-600 font-semibold">₹70/-</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Status -->
+        <div class="bg-white rounded-lg p-6 shadow-md mb-6">
+            <h3 class="text-xl font-semibold mb-4">ऑर्डर स्टेटस</h3>
+            <div class="flex flex-wrap gap-4">
+                <div class="bg-yellow-100 p-4 rounded-lg flex-1">
+                    <h4 class="font-semibold">आजचा ऑर्डर</h4>
+                    <p class="text-yellow-600 mt-2">प्रगतीपथावर</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg flex-1">
+                    <h4 class="font-semibold">पेमेंट स्टेटस</h4>
+                    <p class="text-green-600 mt-2">पेड</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription Details -->
+        <div class="bg-white rounded-lg p-6 shadow-md mb-6">
+            <h3 class="text-xl font-semibold mb-4">सब्सक्रिप्शन तपशील</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="text-left p-2">दिनांक</th>
+                            <th class="text-left p-2">मेनू</th>
+                            <th class="text-left p-2">किंमत</th>
+                            <th class="text-left p-2">स्टेटस</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-2">15 Oct 2023</td>
+                            <td class="p-2">दुपारचे जेवण</td>
+                            <td class="p-2">₹60</td>
+                            <td class="p-2 text-green-600">डेलिवर्ड</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-2">14 Oct 2023</td>
+                            <td class="p-2">रात्रीचे जेवण</td>
+                            <td class="p-2">₹70</td>
+                            <td class="p-2 text-green-600">डेलिवर्ड</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 w-full bg-white border-t shadow-lg">
+        <div class="flex justify-around p-4">
+            <button class="flex flex-col items-center text-green-600">
+                <i class="bi bi-house-door text-xl"></i>
+                <span class="text-xs mt-1">होम</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-500">
+                <i class="bi bi-calendar2-check text-xl"></i>
+                <span class="text-xs mt-1">ऑर्डर</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-500">
+                <i class="bi bi-chat-dots text-xl"></i>
+                <span class="text-xs mt-1">चॅट</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-500">
+                <i class="bi bi-person text-xl"></i>
+                <span class="text-xs mt-1">प्रोफाइल</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Simple notification system
+        document.getElementById('notificationBtn').addEventListener('click', () => {
+            alert('No new notifications!');
+        });
+
+        // Profile button click handler
+        document.getElementById('profileBtn').addEventListener('click', () => {
+            // Add profile navigation logic here
+            console.log('Profile clicked');
+        });
+
+        // Bottom navigation handlers
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('nav button').forEach(btn => {
+                    btn.classList.replace('text-green-600', 'text-gray-500');
+                });
+                button.classList.replace('text-gray-500', 'text-green-600');
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
